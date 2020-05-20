@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import Test from './src/Screens/Test'
-import Header from './src/Components/Header'
+import Test from './src/screens/Test'
+import Header from './src/components/Header'
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
