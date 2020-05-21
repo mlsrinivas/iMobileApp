@@ -3,6 +3,7 @@ import { View, Text, Button, navigation, Alert } from 'react-native';
 import { EquityDebt } from '../common'
 import CustomeButton from './CustomeButton';
 import TextInputField from './TextInputField';
+import CustomeDatePicker from './CustomeDatePicker'
 
 export default class Header extends Component {
     updateHandle = () => {
@@ -46,8 +47,11 @@ export default class Header extends Component {
                     labelName = {'Folio Number'}
                 />
 
-
-                
+                <CustomeDatePicker 
+                    fieldHeading = {'Select Your Start date'}
+                    placeHolderName = {'Select Your Start date'}
+                    passingDate = {this.state.date}
+                />
 
 
             </View>
