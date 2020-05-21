@@ -4,6 +4,8 @@ import { EquityDebt } from '../common'
 import CustomeButton from './CustomeButton';
 import TextInputField from './TextInputField';
 import CustomeDatePicker from './CustomeDatePicker'
+import { Dropdown } from 'react-native-material-dropdown';
+import DropDownField from './DropDownField'
 
 export default class Header extends Component {
     updateHandle = () => {
@@ -15,6 +17,8 @@ export default class Header extends Component {
         }
     }
     render() {
+        const data1 = [{ value: 'Item 1'}, { value: 'Item 2'}, { value: 'Item 3' }, { value: 'Item 4'}];
+
         return (
             <View>
                 <Text>header screen</Text>
@@ -49,11 +53,14 @@ export default class Header extends Component {
 
                 <CustomeDatePicker 
                     fieldHeading = {'Select Your Start date'}
-                    placeHolderName = {'Select Your Start date'}
+                    placeHolderName = {'Select date'}
                     passingDate = {this.state.date}
                 />
 
-
+                <DropDownField 
+                    data = {data1}
+                    labelName = {'Select item'}
+                />
             </View>
         )
     }
