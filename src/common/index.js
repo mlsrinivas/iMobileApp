@@ -1,5 +1,6 @@
-import EquityDebt from './equityDebt'
-
+import EquityBar from './equityBar'
+import ConfirmModal from './confirmModal'
 module.exports = {
-    EquityDebt
+    EquityBar,
+    ConfirmModal
 }
