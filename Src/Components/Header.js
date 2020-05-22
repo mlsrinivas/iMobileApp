@@ -9,7 +9,7 @@ import DropDownField from './DropDownField'
 
 export default class Header extends Component {
     updateHandle = () => {
-        this.props.navigation.navigate('Test')
+        this.props.navigation.navigate('Test3')
     }
     constructor(){
         super();
@@ -27,7 +27,7 @@ export default class Header extends Component {
                 <Button
                     title="Go to Jane's profile"
                     onPress={() =>
-                        this.props.navigation.navigate('Test')
+                        this.props.navigation.navigate('Test3')
                     }
                 />
                 <CustomeButton
@@ -44,7 +44,7 @@ export default class Header extends Component {
                     labelName = {'Amount'}
                 />
                 
-                <View style = {{left:10}}><Text>jdsfkh</Text></View>
+                <View style = {{left:10}}><Text>NET</Text></View>
                 <TextInputField 
                     value = {this.props.value}
                     onChangeText = {this.props.onChangeText}

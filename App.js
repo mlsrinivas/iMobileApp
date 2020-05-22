@@ -1,30 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import Test from './src/screens/Test'
-import Header from './src/components/Header'
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator();
+import MyTabs from './src/config/Router'
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-
-        <Stack.Screen
-          name="Header"
-          component={Header}
-          options={{ title: 'HeadScreen' }}
-        />
-        <Stack.Screen
-          name="Test"
-          component={Test}
-          options={{ title: 'TestScreen' }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <MyTabs />
   )
 }
 export default App;
