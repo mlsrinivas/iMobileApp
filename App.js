@@ -13,17 +13,17 @@ const App = () => {
     <PaperProvider>
       <NavigationContainer>
         <Stack.Navigator>
-
-          <Stack.Screen
-            name="Header"
-            component={Header}
-            options={{ title: 'HeadScreen' }}
-          />
           <Stack.Screen
             name="Test"
             component={Test}
             options={{ title: 'TestScreen' }}
           />
+          <Stack.Screen
+            name="Header"
+            component={Header}
+            options={{ title: 'HeadScreen' }}
+          />
+
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Button, navigation } from 'react-native';
-import { EquityBar, ConfirmModal } from '../common'
+import { EquityBar, ConfirmModal, CheckBox } from '../common'
 
 import { Card, Button as CustomButton, ButtonTab } from '../common/styledComponents'
 export default class Header extends Component {
@@ -8,7 +8,8 @@ export default class Header extends Component {
         super(props);
         this.state = {
             visible: false,
-            activeTab: 0
+            activeTab: 0,
+            isChecked: false
         }
     }
     callback = (value) => {
@@ -20,6 +21,9 @@ export default class Header extends Component {
     }
     onSelectTab = (tab) => {
         this.setState({ activeTab: tab })
+    }
+    onChange = (value) => {
+        this.setState({ isChecked: value })
     }
     render() {
         const tabs = [
@@ -57,6 +61,11 @@ export default class Header extends Component {
                     activeTab={this.state.activeTab}
                     onSelect={this.onSelectTab}
 
+                />
+                <CheckBox
+                    label="Hello"
+                    isChecked={this.state.isChecked}
+                    onChange={this.onChange}
                 />
             </View>
         )

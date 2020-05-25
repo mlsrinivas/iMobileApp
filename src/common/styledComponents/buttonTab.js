@@ -25,6 +25,10 @@ const Tab = styled.TouchableHighlight(props => ({
 }))
 
 const ButtonTab = ({ tabs, activeTab, onSelect, fontSize }) => {
+    const select = (tabId) => {
+        console.log(tabId)
+        onSelect(tabId)
+    }
     return (
         <StyledView>
             {
@@ -36,7 +40,7 @@ const ButtonTab = ({ tabs, activeTab, onSelect, fontSize }) => {
                             key={index}
                             last={index == tabs.length - 1}
                             isActive={activeTab == 0 ? index == 0 ? true : false : activeTab == tab.id}
-                            onPress={() => onSelect(tab.id)}
+                            onPress={(tabId) => { console.log(tabId); select(tab.id) }}
                         >
                             <Text style={{ fontSize: fontSize || 15 - 0.8 * tabs.length }}>{tab.name}</Text>
                         </Tab>
