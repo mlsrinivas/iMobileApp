@@ -11,7 +11,8 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <PaperProvider>
-      <NavigationContainer>
+      <Test />
+      {/* <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
             name="Test"
@@ -25,7 +26,7 @@ const App = () => {
           />
 
         </Stack.Navigator>
-      </NavigationContainer>
+      </NavigationContainer> */}
     </PaperProvider>
   )
 }
